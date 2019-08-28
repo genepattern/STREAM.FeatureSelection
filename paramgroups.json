@@ -1,0 +1,14 @@
+[
+{"name": "Inputs and Outputs", 
+  "parameters": ["data.file", "output.filename"]},
+{"name": "Select Variable Genes", "hidden": false,
+  "parameters": ["find.variable.genes", "loess.fraction","percentile", "num.genes" ]},
+
+{"name": "Principal Components Analysis", "hidden": false,
+  "parameters": ["find.principal.components","feature", "num.principal.components","max.principal.components", "first.principal.component", "use.precomputed"]}
+
+, { "name":"Plotting", "hidden":false, "parameters":["figure.height","figure.width"]}
+
+]
+
+

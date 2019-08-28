@@ -1,0 +1,1 @@
+docker run  -v ${PWD}:$PWD -w $PWD/job_1 genepattern/stream_featureselection python /stream/featureselection_command_line.py -m $PWD/test/data/foo_stream_result.pkl -of barpca --flag_pca -n_pc 15 -max_pc 100 --flag_firstpc --flag_useprecomputed
