@@ -26,7 +26,7 @@
   THE SOFTWARE.
 -->
 
-<project basedir="" default="devReleaseModule" name="STREAMFeatureSelection">
+<project basedir="" default="devReleaseModule" name="STREAM.FeatureSelection">
     <property name="dirOffset" value="../../common_module_code" />
     <import file="${dirOffset}/commontargets.xml" />
 
