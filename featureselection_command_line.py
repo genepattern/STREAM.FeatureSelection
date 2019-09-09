@@ -34,7 +34,7 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 print('- STREAM Single-cell Trajectory Reconstruction And Mapping -',flush=True)
 print('Version %s\n' % st.__version__,flush=True)
-    
+print('sys.argv is', sys.argv)    
 
 def main():
     sns.set_style('white')
@@ -57,7 +57,8 @@ def main():
     parser.add_argument("-fig_width",dest="fig_width", type=int, default=8, help="")
     parser.add_argument("-fig_height",dest="fig_height", type=int, default=8, help="")
  
-
+    parser.add_argument("--flag",dest="flag", action="store_true",  help="debugging flag")
+    
     args = parser.parse_args()
     
     print('Starting feature selection procedure...')
@@ -70,10 +71,10 @@ def main():
     #print('N_genes is ' + str(args.num_genes))
 
     if (args.flag_variable):
-        st.select_variable_genes(adata,loess_frac=args.loess_fraction,percentile=args.percentile,n_genes=args.num_genes,n_jobs=args.num_jobs, save_fig=True, fig_name=(args.output_filename_prefix + '_variable_genes.png'), fig_size=(args.fig_width,args.fig_height ))
+        st.select_variable_genes(adata,loess_frac=args.loess_fraction,percentile=args.percentile,n_genes=args.num_genes,n_jobs=args.num_jobs, save_fig=True, fig_name=(args.output_filename_prefix + '_variable_genes.png'), fig_size=(args.fig_width,args.fig_height ), fig_path="./")
 
     if (args.flag_pca):
-        st.select_top_principal_components(adata, feature=args.feature,n_pc=args.num_principal_components,max_pc=args.max_principal_components,first_pc=args.flag_firstpc,use_precomputed=args.flag_useprecomputed, save_fig=True, fig_name=(args.output_filename_prefix + '_pca.png'), fig_size=(args.fig_width,args.fig_height ))
+        st.select_top_principal_components(adata, feature=args.feature,n_pc=args.num_principal_components,max_pc=args.max_principal_components,first_pc=args.flag_firstpc,use_precomputed=args.flag_useprecomputed, save_fig=True, fig_name=(args.output_filename_prefix + '_pca.png'), fig_size=(args.fig_width,args.fig_height ), fig_path='./')
 
 
     st.write(adata,file_name=(args.output_filename_prefix + '_stream_result.pkl'),file_path='./',file_format='pkl') 

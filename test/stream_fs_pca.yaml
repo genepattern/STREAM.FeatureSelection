@@ -6,6 +6,10 @@ module: STREAM.FeatureSelection
 params: 
     "data.file": "./data/foo_stream_result.pkl" 
     "output.filename": "test"
+    "find.principal.components": "True"
+    "feature": "var_genes"
+    "num.principal.components": "15"
+    "max.principal.component": "100"
     "find.variable.genes": "True"
     "loess.fraction": "0.1"
     "percentile": "95"
