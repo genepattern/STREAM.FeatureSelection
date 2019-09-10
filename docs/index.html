@@ -3,7 +3,7 @@
 <!-- saved from url=(0078)http://software.broadinstitute.org/cancer/software/genepattern/module_docs/223 -->
 <html class="">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>MODULE_NAME GenePattern Module</title>
+  <title>STREAM.FeatureSelection GenePattern Module</title>
   <link href="./assets/docstyle.css" media="all" rel="stylesheet">
   <style type="text/css"></style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +19,7 @@
 			<div class="row">
 				<div class="col-md-12">
 			        <h4><img src="./assets/gplogo.png"/>Module Documentation</h4>
-                                <h1><big>MODULE_NAME</big></h1>
+                                <h1><big>STREAM.FeatureSelection</big></h1>
 				</div>
 			</div>
 		</div>
@@ -31,12 +31,12 @@
 <br/>
 <dl class="dl-horizontal">
 	<dt>LSID</dt>
-	<dd>urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00382</dd>
+	<dd>urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00396</dd>
 	<dt>Author(s)</dt>
-	<dd>AUTHOR, SOME University, wrapped as a module by TEAM_MEMBER, Mesirov Lab, UCSD School of Medicine.</dd>
+	<dd>Huidong Chen, Massachussets General Hospital, wrapped as a module by Ted Liefeld, Mesirov Lab, UCSD School of Medicine.</dd>
 	<dt>Contact(s)</dt>
-	<dd><p>Algorithm and scientific questions:&nbsp;ALGORITHM PERSON &lt;EMAIL &nbsp;at &DOMAIN  dot edu&gt;</p>
-<p>Module wrapping issues:&nbsp; TEAM MEMBER &lt;EMAIL at cloud dot ucsd dot edu&gt;</p>
+	<dd><p>Algorithm and scientific questions:&nbsp;&lt;Huidong.Chen &nbsp;at mgh dot harvard  dot edu&gt;</p>
+<p>Module wrapping issues:&nbsp; Ted Liefeld &nbsp;&lt; jliefeld at cloud dot ucsd dot edu&gt;</p>
 </dd>
 </dl>
 
@@ -45,43 +45,48 @@
 
 <h2>Introduction</h2>
 
-<p>DESCRIBE MODULE BRIEFLY HERE</p>
+<p>STREAM (Single-cell Trajectories Reconstruction, Exploration And Mapping) is an interactive pipeline capable of disentangling and visualizing complex branching trajectories from both single-cell transcriptomic and epigenomic data.  Within GenePattern STREAM is implemented as a collection of modules that cover the entire STREAM processing pipeline to allow individual steps to be performed interactively for data exploration.</p>
 
-<p>second parargraph of intro.</p>
+<p>STREAM.FeatureSelection is used to identify features to be used in the downstream analysis. Two types of features can be used;</p>
+<ul>
+<li>Variable genes</li>
+<li>Top principal components</li>
+</ul>
 
-<p>third paragraph of intro.</p>
+<p><h5>Huidong to add detail explaining feature selection</h5></p>
 
 <p>&nbsp;</p>
 
 <h2>Algorithm</h2>
 <p>
-Description of the algoritm implementation.  Usually cribbed from the publication of the algorithm
+<h5>Huidong to cover details of variable genes and PCA</h5>
 </p>
 
 <h2>References</h2>
-<p>Wolf, A.F., et al. (2018). SCANPY: large-scale single-cell gene expression data analysis. Genome Biology. 19:15</p>
-<p><b>CAN ALSO REFERENCE A GPNB NOTEBOOK HERE OR WESITE</b></p>
+<p>H Chen, L Albergante, JY Hsu, CA Lareau, GL Bosco, J Guan, S Zhou, AN Gorban, DE Bauer, MJ Aryee, DM Langenau, A Zinovyev, JD Buenrostro, GC Yuan, L Pinello&nbsp;<a href="https://www.nature.com/articles/s41467-019-09670-4">Single-cell trajectories reconstruction, exploration and mapping of omics data with STREAM. </a> Nature Communications, volume 10, Article number: 1903 (2019)</p>
+<p>Nestorowa, S. et al.<a href="https://www.ncbi.nlm.nih.gov/pubmed/27365425"> A single-cell resolution map of mouse hematopoietic stem and progenitor cell differentiation</a>. Blood 128, e20-31 (2016).</p>
+<p>Pinello Lab &nbsp; <a href="https://github.com/pinellolab/STREAM">STREAM Github Repository</a></p>
+<p><b>ADD GPNB NOTEBOOK HERE WHEN READY</b></p>
 
 <h2>Input Files</h2>
 
 <ol>
-	<li>Data File *<br>
-	Datafile containing single-cell counts data in h5, h5ad, loom or mtx formats.</li>
+	<li>data file *<br>
+ A STREAM pkl file containing an annotated AnnData matrix of gene expression data.</li>
 	
-	<li>Cell type marker file<br/>
-	A text file describing the marker genes for each cell type. This should be in the format accepted by the R package garnett as defined in https://cole-trapnell-lab.github.io/garnett/docs/.</li>
 </ol>
 
 <h2>Output Files</h2>
 
 <ol>
-	<li>&lt;output basename&gt;.h5ad&lt;<br>
-	Output file in AnnData h5ad format.</li>
+	<li>&lt;output basename&gt;_stream_result.pkl&lt;<br>
+	Output file in STREAM AnnData extended pickle (.pkl) file format suitable for passing to the next step, STREAM>DimensionReduction.</li>
 </ol>
 
 <h2>Example Data</h2>
 
-<p>Sample data from the Human Cell Atlas Census of Immune Cells  is available at&nbsp;https://preview.data.humancellatlas.org/.&nbsp;</p>
+<p>Example data can be downloaded from dropbox: <a href="https://www.dropbox.com/sh/dfqht1ob89ku99d/AACI5ZW3aRuq9MhBfSNS_1O_a?dl=0">Stream Example Data</a><br/>
+Ref: Nestorowa, S. et al. <a href="https://www.ncbi.nlm.nih.gov/pubmed/27365425">A single-cell resolution map of mouse hematopoietic stem and progenitor cell differentiation</a>. Blood 128, e20-31 (2016).</p>
 
 <h2>Requirements</h2>
 
