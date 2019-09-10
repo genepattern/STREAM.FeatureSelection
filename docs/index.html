@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0078)http://software.broadinstitute.org/cancer/software/genepattern/module_docs/223 -->
+<html class="">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>MODULE_NAME GenePattern Module</title>
+  <link href="./assets/docstyle.css" media="all" rel="stylesheet">
+  <style type="text/css"></style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="authenticity_token" name="csrf-param">
+</head>
+<body >
+
+<script>
+</script>
+	
+	<div class="gp-content-header fluid">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+			        <h4><img src="./assets/gplogo.png"/>Module Documentation</h4>
+                                <h1><big>MODULE_NAME</big></h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				
+<br/>
+<dl class="dl-horizontal">
+	<dt>LSID</dt>
+	<dd>urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00382</dd>
+	<dt>Author(s)</dt>
+	<dd>AUTHOR, SOME University, wrapped as a module by TEAM_MEMBER, Mesirov Lab, UCSD School of Medicine.</dd>
+	<dt>Contact(s)</dt>
+	<dd><p>Algorithm and scientific questions:&nbsp;ALGORITHM PERSON &lt;EMAIL &nbsp;at &DOMAIN  dot edu&gt;</p>
+<p>Module wrapping issues:&nbsp; TEAM MEMBER &lt;EMAIL at cloud dot ucsd dot edu&gt;</p>
+</dd>
+</dl>
+
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>DESCRIBE MODULE BRIEFLY HERE</p>
+
+<p>second parargraph of intro.</p>
+
+<p>third paragraph of intro.</p>
+
+<p>&nbsp;</p>
+
+<h2>Algorithm</h2>
+<p>
+Description of the algoritm implementation.  Usually cribbed from the publication of the algorithm
+</p>
+
+<h2>References</h2>
+<p>Wolf, A.F., et al. (2018). SCANPY: large-scale single-cell gene expression data analysis. Genome Biology. 19:15</p>
+<p><b>CAN ALSO REFERENCE A GPNB NOTEBOOK HERE OR WESITE</b></p>
+
+<h2>Input Files</h2>
+
+<ol>
+	<li>Data File *<br>
+	Datafile containing single-cell counts data in h5, h5ad, loom or mtx formats.</li>
+	
+	<li>Cell type marker file<br/>
+	A text file describing the marker genes for each cell type. This should be in the format accepted by the R package garnett as defined in https://cole-trapnell-lab.github.io/garnett/docs/.</li>
+</ol>
+
+<h2>Output Files</h2>
+
+<ol>
+	<li>&lt;output basename&gt;.h5ad&lt;<br>
+	Output file in AnnData h5ad format.</li>
+</ol>
+
+<h2>Example Data</h2>
+
+<p>Sample data from the Human Cell Atlas Census of Immune Cells  is available at&nbsp;https://preview.data.humancellatlas.org/.&nbsp;</p>
+
+<h2>Requirements</h2>
+
+<p>GenePattern 3.9.11 or later (dockerized).</p>
+
+
+<h2>Parameters</h2>
+
+<table class="table table-striped">
+	
+	<tbody>
+			<tr><td colspan=2 ><h4>FIRST PARAMETER GROUPING</h4></td></tr>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>data file*</td>
+			<td>A file containing single-cell data. h5ad, loom and mtx file formats are accepted. An h5 file may also be provided if a genome is also provided which will be used converting to h5ad format.</td>
+		</tr>
+		<tr>
+			<td>output basename*</td>
+			<td>Base filename for the output file.</td>
+		</tr>
+		<tr><td colspan=2 ><h4>SECOND PARAMETER GROUPING</h4></td></tr>
+		<tr><td colspan=2>
+			Describe the second parameter group if desired.
+                </td></tr>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>annotate*</td>
+			<td>Whether to perform annotation True/False.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span style="color: red;">*</span> - required</p>
+			</div>
+		</div>
+	</div>
+
+	</div>
+	<footer class="container fluid gp-footer">
+	<div class="fluid text-center">©2006-2019 Regents of the University of California &amp; The Broad Institute of MIT and Harvard</div> 
+</footer>
+
+
+
+<div id="feedly-mini" title="feedly Mini tookit"></div></body></html>
+
