@@ -52,14 +52,19 @@
 <li>Variable genes</li>
 <li>Top principal components</li>
 </ul>
-
-<p><h5>Huidong to add detail explaining feature selection</h5></p>
+</p>
+<p>
+For transcriptomic data (single-cell RNA-seq or qPCR), the input of STREAM is a gene expression matrix, where rows represent genes, columns represent cells. Each entry contains an adjusted gene expression value (after library size normalization and log2 transformation, typically performed using the STREAM.Preprocessing module).
+</p>
 
 <p>&nbsp;</p>
 
 <h2>Algorithm</h2>
 <p>
-<h5>Huidong to cover details of variable genes and PCA</h5>
+By default the most variable genes are selected as features. For each gene, its mean value and standard deviation are calculated across all the cells. Then a non-parametric local regression method (LOESS) is used to fit the relationship between mean and standard deviation values. Genes above the curve that diverge significantly are selected as variable genes.
+</p><p>
+Alternatively, users can also perform PCA on the scaled matrix and select the top principal components based on the variance ratio elbow plot.
+
 </p>
 
 <h2>References</h2>
