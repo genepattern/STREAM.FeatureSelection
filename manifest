@@ -243,6 +243,6 @@ requiredPatchURLs=
 taskDoc=doc.html
 userid=ted
 version=inital revision
-categories=Single-Cell; RNA-Seq
+categories=Single-Cell
 taskType=Single-cell
 
