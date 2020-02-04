@@ -4,7 +4,6 @@
 JVMLevel=
 LSID=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00396
 author=Ted Liefeld, UCSD School of Medicine.
-categories=SingleCell
 
 commandLine=python /stream/featureselection_command_line.py -m <data.file> <output.filename> <loess.fraction> <percentile> <num.genes> -n_j <job.cpuCount> <feature> <num.principal.components> <max.principal.components> --flag <first.principal.component> --flag  <use.precomputed> --flag <find.variable.genes> --flag <find.principal.components> <figure.height> <figure.width>
 
@@ -242,6 +241,8 @@ quality=beta
 requiredPatchLSIDs=
 requiredPatchURLs=
 taskDoc=doc.html
-taskType=ScRnaSeq
 userid=ted
 version=inital revision
+categories=Single-Cell; RNA-Seq
+taskType=Single-cell
+
